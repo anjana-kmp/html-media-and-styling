@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media and styling</title>
+    <style>
+        body{
+            width: 95%;
+            height: calc(100% - 40px);
+            display: flex;
+            position: absolute;
+            margin: 10 px;
+            padding: 10px;
+        }
+        .container{
+            border: 3px dashed black;
+            position: relative;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        .simple-box{
+            border: 3px solid red;
+            background: linear-gradient(to right, red,white);
+            border-radius: 1em;
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: -10px 10px 15px gray,5px 5px 5px inset cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="simple-box"></div>
+    </div>
+    
+</body>
+</html>
