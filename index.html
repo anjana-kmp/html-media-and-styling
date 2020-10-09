@@ -1,29 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container > div{
+        * {
+            font-family: sans-serif;
+        }
+
+        .container>div {
             width: 256px;
             height: auto;
             display: inline-block;
-            border: 1px dashed green;
+            border: 3px dashed green;
             /* visibility: hidden; */
 
         }
 
+        table {
+            display: table;
+            border: 3px double black;
 
+        }
+
+        thead {
+            text-transform: capitalize;
+        }
+
+        td {
+            display: table-cell;
+            border: 1px solid black;
+            min-width: 160px;
+        }
+
+        i {
+            width: 40px;
+            height: 40px;
+            display: block;
+
+        }
+
+        .USA {
+            background-image: url(./images/USA.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="image-png">
-           <img src="./images/computer.png" alt=""> 
+            <img src="./images/computer.png" alt="">
         </div>
         <div>
             <p>I am having text only.</p>
+            <div>
+                This is the innermost div in this page.
+            </div>
+
         </div>
 
         <div class="image-svg">
@@ -31,6 +69,90 @@
         </div>
 
     </div>
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    country
+                </td>
+                <td>
+                    capital
+                </td>
+                <td>
+                    area
+                </td>
+                <td>
+                    population
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    India
+                </td>
+                <td>
+                    New Delhi
+                </td>
+                <td>
+                    3,287,263 sq km
+                </td>
+                <td>
+                    1,366,417,754
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    China
+                </td>
+                <td>
+                    Beijing
+                </td>
+                <td>
+                    9,596,961 sq km
+                </td>
+                <td>
+                    1,433,783,686
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <i class="icon USA"></i>
+
+                    <span>USA</span>
+                </td>
+                <td>
+                    Washington DC
+                </td>
+                <td>
+                    9,833,517 sq km
+                </td>
+                <td>
+                    329,064,917
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    Russia
+                </td>
+                <td>
+                    Moscow
+                </td>
+                <td>
+                    17,098,242 sq km
+                </td>
+                <td>
+                    145,872,256
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
 
 </body>
+
 </html>
