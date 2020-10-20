@@ -1,0 +1,64 @@
+* {
+    font-family: sans-serif;
+}
+
+.container>div {
+    width: 256px;
+    height: auto;
+    display: inline-block;
+    border: 3px dashed green;
+    /* visibility: hidden; */
+
+}
+
+table {
+    display: table;
+    border: 3px double black;
+
+}
+
+thead {
+    text-transform: capitalize;
+}
+
+td {
+    display: table-cell;
+    border: 1px solid black;
+    min-width: 160px;
+}
+
+i {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+
+}
+
+.india {
+    background-image: url(./images/india.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.china {
+    background-image: url(./images/china.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.USA {
+    background-image: url(./images/USA.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.russia {
+    background-image: url(./images/russia.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
