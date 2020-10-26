@@ -4,118 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Media-audio and video</title>
+    <style>
+        body {
+            position: absolute;
+            /* display: flex; */
+        }
+
+        .audiobox {
+            width: 300px;
+            display: flex;
+            flex: 1;
+            position: relative;
+            justify-content: center;
+            align-items: flex-end;
+            border: 2px solid black;
+        }
+
+        img {
+            flex: 1;
+            z-index: 0;
+
+        }
+
+        audio {
+            width: 250px;
+            z-index: 2;
+            position: absolute;
+            align-self: flex-end;
+
+        }
+
+        video{
+            width: 400px;
+        }
+    </style>
 </head>
 
+
 <body>
-    <div class="container">
-        <div class="image-png">
-            <img src="./images/computer.png" alt="">
-        </div>
-        <div>
-            <p>I am having text only.</p>
-            <div>
-                This is the innermost div in this page.
-            </div>
+    <button onclick="playAllaudio()">Play all audio</button>
+    <button onclick="playAllmedia()">Play all media</button>
+    <div class="audios">
+        <div class="audiobox">
+            <img src="./images/ukulele.jpg" alt="">
+
+            <audio src="./audio/bensound-ukulele.mp3" controls>
+
+            </audio>
 
         </div>
+        <div class="audiobox">
 
-        <div class="image-svg">
-            <img src="./images/computer.svg" alt="">
+            <img src="./images/hey.jpg" alt="">
+
+            <audio src="./audio/bensound-hey.mp3" controls onended="alert('hey was ended')"></audio>
+
         </div>
+        <div class="audiobox">
 
+            <img src="./images/happyrock.jpg" alt="">
+
+            <audio src="./audio/bensound-happyrock.mp3" controls onloadeddata=""></audio>
+
+        </div>
     </div>
-    <table>
-        <thead>
-            <tr>
-                <td>
-                    country
-                </td>
-                <td>
-                    capital
-                </td>
-                <td>
-                    area
-                </td>
-                <td>
-                    population
-                </td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <i class="icon india"></i>
+    <div class="videos">
+        <div class="videobox">
+            <video src="./video/globe.mp4" controls></video>
 
-                    India
-                </td>
-                <td>
-                    New Delhi
-                </td>
-                <td>
-                    3,287,263 sq km
-                </td>
-                <td>
-                    1,366,417,754
-                </td>
+        </div>
+        <div class="videobox">
+            <video src="./video/code.mp4"controls></video>
+        </div>
+    </div>
 
-            </tr>
-            <tr>
-                <td>
-                    <i class="icon china"></i>
 
-                    China
-                </td>
-                <td>
-                    Beijing
-                </td>
-                <td>
-                    9,596,961 sq km
-                </td>
-                <td>
-                    1,433,783,686
-                </td>
+   
+    <script>
+        function playAllaudio() {
+            let audios = document.querySelectorAll('audio')
+            debugger
+            audios.forEach(function (aud) {
+                aud.volume=.05
+                aud.currentTime=1
+                aud.play()
+            })
+        }
+        function playAllmedia(){
+            let medias=document.querySelectorAll('audio,video')
+            debugger
+            medias.forEach(function(med){
+                med.play()
+            })
 
-            </tr>
-            <tr>
-                <td>
-                    <i class="icon USA"></i>
-
-                    <span>USA</span>
-                </td>
-                <td>
-                    Washington DC
-                </td>
-                <td>
-                    9,833,517 sq km
-                </td>
-                <td>
-                    329,064,917
-                </td>
-
-            </tr>
-            <tr>
-                <td>
-                    <i class="icon russia"></i>
-
-                    Russia
-                </td>
-                <td>
-                    Moscow
-                </td>
-                <td>
-                    17,098,242 sq km
-                </td>
-                <td>
-                    145,872,256
-                </td>
-
-            </tr>
-
-        </tbody>
-    </table>
-
+        }
+    </script>
 </body>
 
 </html>
